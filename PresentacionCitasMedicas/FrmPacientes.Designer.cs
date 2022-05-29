@@ -1,6 +1,6 @@
 ﻿namespace PresentacionCitasMedicas
 {
-    partial class FrmMedicos
+    partial class FrmPacientes
     {
         /// <summary>
         /// Required designer variable.
@@ -33,15 +33,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.dtvMedicos = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.dtvPacientes = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtvMedicos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvPacientes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkCyan;
+            this.panel1.BackColor = System.Drawing.Color.DarkViolet;
             this.panel1.Controls.Add(this.btnCerrar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -51,7 +51,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.DarkRed;
+            this.btnCerrar.BackColor = System.Drawing.Color.Crimson;
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
             this.btnCerrar.Location = new System.Drawing.Point(516, 9);
             this.btnCerrar.Name = "btnCerrar";
@@ -65,11 +65,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(246, 15);
+            this.label1.Location = new System.Drawing.Point(241, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Médicos";
+            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Pacientes";
             // 
             // label2
             // 
@@ -88,20 +88,6 @@
             this.txtBuscar.TabIndex = 2;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
-            // dtvMedicos
-            // 
-            this.dtvMedicos.AllowUserToAddRows = false;
-            this.dtvMedicos.AllowUserToDeleteRows = false;
-            this.dtvMedicos.BackgroundColor = System.Drawing.Color.White;
-            this.dtvMedicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvMedicos.Location = new System.Drawing.Point(16, 98);
-            this.dtvMedicos.Name = "dtvMedicos";
-            this.dtvMedicos.ReadOnly = true;
-            this.dtvMedicos.Size = new System.Drawing.Size(532, 240);
-            this.dtvMedicos.TabIndex = 3;
-            this.dtvMedicos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvMedicos_CellClick);
-            this.dtvMedicos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvMedicos_CellEnter);
-            // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Green;
@@ -109,31 +95,45 @@
             this.btnAgregar.Location = new System.Drawing.Point(516, 54);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(32, 32);
-            this.btnAgregar.TabIndex = 4;
+            this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // FrmMedicos
+            // dtvPacientes
+            // 
+            this.dtvPacientes.AllowUserToAddRows = false;
+            this.dtvPacientes.AllowUserToDeleteRows = false;
+            this.dtvPacientes.BackgroundColor = System.Drawing.Color.White;
+            this.dtvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvPacientes.Location = new System.Drawing.Point(16, 98);
+            this.dtvPacientes.Name = "dtvPacientes";
+            this.dtvPacientes.ReadOnly = true;
+            this.dtvPacientes.Size = new System.Drawing.Size(532, 240);
+            this.dtvPacientes.TabIndex = 6;
+            this.dtvPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvPacientes_CellClick);
+            this.dtvPacientes.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvMedicos_CellEnter);
+            // 
+            // FrmPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 400);
+            this.Controls.Add(this.dtvPacientes);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dtvMedicos);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FrmMedicos";
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "FrmPacientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMedicos";
-            this.Load += new System.EventHandler(this.FrmMedicos_Load);
+            this.Text = "Pacientes";
+            this.Load += new System.EventHandler(this.FrmPacientes_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtvMedicos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvPacientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,11 +142,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.DataGridView dtvMedicos;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.DataGridView dtvPacientes;
     }
 }

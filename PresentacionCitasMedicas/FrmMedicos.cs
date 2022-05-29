@@ -67,6 +67,11 @@ namespace PresentacionCitasMedicas
         {
             medico.Id = int.Parse(dtvMedicos.Rows[e.RowIndex].Cells[0].Value.ToString());
             medico.Nombre = dtvMedicos.Rows[e.RowIndex].Cells[1].Value.ToString();
+            medico.Apellidopaterno = dtvMedicos.Rows[e.RowIndex].Cells[2].Value.ToString();
+            medico.Apellidomaterno = dtvMedicos.Rows[e.RowIndex].Cells[3].Value.ToString();
+            medico.Telefono = dtvMedicos.Rows[e.RowIndex].Cells[4].Value.ToString();
+            medico.Correo = dtvMedicos.Rows[e.RowIndex].Cells[5].Value.ToString();
+            medico.Especialidad = dtvMedicos.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
     }
 }

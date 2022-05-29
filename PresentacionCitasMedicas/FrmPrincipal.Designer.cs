@@ -71,6 +71,7 @@
             this.optPacientes.Name = "optPacientes";
             this.optPacientes.Size = new System.Drawing.Size(40, 40);
             this.optPacientes.Text = "Pacientes";
+            this.optPacientes.Click += new System.EventHandler(this.optPacientes_Click);
             // 
             // toolStripButton3
             // 

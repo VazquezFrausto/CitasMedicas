@@ -17,7 +17,7 @@ namespace AccesoDatosCitasMedicas
 
         public void Borrar(dynamic entidad)
         {
-            b.Comando(string.Format("call detele_paciente({0})", entidad.Id));
+            b.Comando(string.Format("call delete_paciente({0})", entidad.Id));
         }
 
         public void Guardar(dynamic entidad)

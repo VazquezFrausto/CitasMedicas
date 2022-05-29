@@ -223,6 +223,7 @@
             this.Name = "FrmMedicoAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmMedicoAdd";
+            this.Load += new System.EventHandler(this.FrmMedicoAdd_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

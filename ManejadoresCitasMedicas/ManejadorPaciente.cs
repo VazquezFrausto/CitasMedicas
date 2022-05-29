@@ -16,6 +16,7 @@ namespace ManejadoresCitasMedicas
         public void Actualizar(dynamic entidad)
         {
             ap.Actualizar(entidad);
+            g.Mensaje("Se ha actualizado correctamente", "Aviso", MessageBoxIcon.Information);
         }
 
         public void Borrar(dynamic entidad)
@@ -36,6 +37,7 @@ namespace ManejadoresCitasMedicas
         public void Guardar(dynamic entidad)
         {
             ap.Guardar(entidad);
+            g.Mensaje("Se ha guardado correctamente", "Aviso", MessageBoxIcon.Information);
         }
 
         public void Mostrar(DataGridView tabla, string filtro)
@@ -45,7 +47,15 @@ namespace ManejadoresCitasMedicas
             tabla.DataSource = ap.Mostrar(filtro).Tables["paciente"];
             tabla.Columns.Insert(8, g.Boton("Editar", Color.Green));
             tabla.Columns.Insert(9, g.Boton("Eliminar", Color.Crimson));
-            tabla.Columns[0].Visible = true;
+            tabla.Columns[0].Visible = false;
+            tabla.Columns[0].HeaderText = "ID";
+            tabla.Columns[1].HeaderText = "Nombre";
+            tabla.Columns[2].HeaderText = "Apellido paterno";
+            tabla.Columns[3].HeaderText = "Apellido materno";
+            tabla.Columns[4].HeaderText = "Edad";
+            tabla.Columns[5].HeaderText = "Peso";
+            tabla.Columns[6].HeaderText = "Estatura";
+            tabla.Columns[7].HeaderText = "Telefono";
         }
     }
 }

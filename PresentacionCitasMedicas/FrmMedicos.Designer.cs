@@ -35,6 +35,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dtvMedicos = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnExportar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtvMedicos)).BeginInit();
             this.SuspendLayout();
@@ -114,11 +115,24 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // btnExportar
+            // 
+            this.btnExportar.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnExportar.ForeColor = System.Drawing.Color.White;
+            this.btnExportar.Location = new System.Drawing.Point(448, 344);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(100, 40);
+            this.btnExportar.TabIndex = 5;
+            this.btnExportar.Text = "Exportar";
+            this.btnExportar.UseVisualStyleBackColor = false;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            // 
             // FrmMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 400);
+            this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dtvMedicos);
             this.Controls.Add(this.txtBuscar);
@@ -148,5 +162,6 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dtvMedicos;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnExportar;
     }
 }

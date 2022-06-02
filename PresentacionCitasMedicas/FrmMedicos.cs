@@ -73,5 +73,10 @@ namespace PresentacionCitasMedicas
             medico.Correo = dtvMedicos.Rows[e.RowIndex].Cells[5].Value.ToString();
             medico.Especialidad = dtvMedicos.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            mm.Exportar(dtvMedicos);
+        }
     }
 }

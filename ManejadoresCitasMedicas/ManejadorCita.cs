@@ -22,8 +22,7 @@ namespace ManejadoresCitasMedicas
 
         public void Borrar(dynamic entidad)
         {
-            DialogResult rs = MessageBox.Show(string.Format("¿Desea eliminar la cita de la base de datos?",
-                entidad.Nombre), "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult rs = MessageBox.Show(string.Format("¿Desea eliminar la cita de la base de datos?"), "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
                 ac.Borrar(entidad);

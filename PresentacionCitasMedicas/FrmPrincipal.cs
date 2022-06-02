@@ -33,5 +33,11 @@ namespace PresentacionCitasMedicas
             FrmPacientes pacientes = new FrmPacientes();
             pacientes.Show();
         }
+
+        private void optCitas_Click(object sender, EventArgs e)
+        {
+            FrmCitas citas = new FrmCitas();
+            citas.Show();
+        }
     }
 }

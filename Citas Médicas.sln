@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatosCitasMedicas", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesCitasMedicas", "EntidadesCitasMedicas\EntidadesCitasMedicas.csproj", "{CC7ACFFC-97F6-4CF5-9D8F-680EA3932684}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Proyecto", "Proyecto\Proyecto.vdproj", "{3254E040-6B89-4B4B-83C4-56363E81EB19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,8 @@ Global
 		{CC7ACFFC-97F6-4CF5-9D8F-680EA3932684}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC7ACFFC-97F6-4CF5-9D8F-680EA3932684}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC7ACFFC-97F6-4CF5-9D8F-680EA3932684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3254E040-6B89-4B4B-83C4-56363E81EB19}.Debug|Any CPU.ActiveCfg = Debug
+		{3254E040-6B89-4B4B-83C4-56363E81EB19}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

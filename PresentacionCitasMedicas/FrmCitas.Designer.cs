@@ -31,12 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtvCitas = new System.Windows.Forms.DataGridView();
+            this.dgvCitas = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtvCitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,17 +71,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Citas";
             // 
-            // dtvCitas
+            // dgvCitas
             // 
-            this.dtvCitas.AllowUserToAddRows = false;
-            this.dtvCitas.AllowUserToDeleteRows = false;
-            this.dtvCitas.BackgroundColor = System.Drawing.Color.White;
-            this.dtvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtvCitas.Location = new System.Drawing.Point(16, 98);
-            this.dtvCitas.Name = "dtvCitas";
-            this.dtvCitas.ReadOnly = true;
-            this.dtvCitas.Size = new System.Drawing.Size(532, 240);
-            this.dtvCitas.TabIndex = 10;
+            this.dgvCitas.AllowUserToAddRows = false;
+            this.dgvCitas.AllowUserToDeleteRows = false;
+            this.dgvCitas.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCitas.Location = new System.Drawing.Point(16, 98);
+            this.dgvCitas.Name = "dgvCitas";
+            this.dgvCitas.ReadOnly = true;
+            this.dgvCitas.Size = new System.Drawing.Size(532, 240);
+            this.dgvCitas.TabIndex = 10;
+            this.dgvCitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCitas_CellClick);
+            this.dgvCitas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCitas_CellEnter);
             // 
             // btnAgregar
             // 
@@ -93,6 +95,7 @@
             this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "+";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtBuscar
             // 
@@ -100,6 +103,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(430, 26);
             this.txtBuscar.TabIndex = 8;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // label2
             // 
@@ -115,7 +119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 400);
-            this.Controls.Add(this.dtvCitas);
+            this.Controls.Add(this.dgvCitas);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtBuscar);
@@ -126,9 +130,10 @@
             this.Name = "FrmCitas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCitas";
+            this.Load += new System.EventHandler(this.FrmCitas_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtvCitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,7 +144,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dtvCitas;
+        private System.Windows.Forms.DataGridView dgvCitas;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label2;

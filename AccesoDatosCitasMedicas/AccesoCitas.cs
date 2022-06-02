@@ -27,7 +27,7 @@ namespace AccesoDatosCitasMedicas
 
         public DataSet Mostrar(string filtro)
         {
-            return b.Obtener(string.Format("call show_cita('{0}'", filtro), "cita");
+            return b.Obtener(string.Format("call show_cita('{0}')", filtro), "cita");
         }
     }
 }

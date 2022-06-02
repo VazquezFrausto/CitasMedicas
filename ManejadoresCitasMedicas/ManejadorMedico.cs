@@ -31,7 +31,26 @@ namespace ManejadoresCitasMedicas
 
         public void Exportar(DataGridView tabla)
         {
-            throw new NotImplementedException();
+            Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
+            app.Application.Workbooks.Add(true);
+            int indiceColumna = 0;
+            foreach (DataGridViewColumn columna in tabla.Columns)
+            {
+                indiceColumna++;
+                app.Cells[1, indiceColumna] = columna.Name;
+            }
+            int indiceFila = 0;
+            foreach (DataGridViewRow fila in tabla.Rows)
+            {
+                indiceFila++;
+                indiceColumna = 0;
+                foreach (DataGridViewColumn columna in tabla.Columns)
+                {
+                    indiceColumna++;
+                    app.Cells[indiceFila + 1, indiceColumna] = fila.Cells[columna.Name].Value;
+                }
+            }
+            app.Visible = true;
         }
 
         public void Guardar(dynamic entidad)

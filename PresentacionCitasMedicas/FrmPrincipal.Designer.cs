@@ -32,7 +32,7 @@
             this.optMedicos = new System.Windows.Forms.ToolStrip();
             this.optMedic = new System.Windows.Forms.ToolStripButton();
             this.optPacientes = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.optCitas = new System.Windows.Forms.ToolStripButton();
             this.optSalir = new System.Windows.Forms.ToolStripButton();
             this.optMedicos.SuspendLayout();
             this.SuspendLayout();
@@ -43,7 +43,7 @@
             this.optMedicos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.optMedic,
             this.optPacientes,
-            this.toolStripButton3,
+            this.optCitas,
             this.optSalir});
             this.optMedicos.Location = new System.Drawing.Point(0, 0);
             this.optMedicos.Name = "optMedicos";
@@ -73,15 +73,16 @@
             this.optPacientes.Text = "Pacientes";
             this.optPacientes.Click += new System.EventHandler(this.optPacientes_Click);
             // 
-            // toolStripButton3
+            // optCitas
             // 
-            this.toolStripButton3.AutoSize = false;
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(40, 40);
-            this.toolStripButton3.Text = "Citas";
+            this.optCitas.AutoSize = false;
+            this.optCitas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.optCitas.Image = ((System.Drawing.Image)(resources.GetObject("optCitas.Image")));
+            this.optCitas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.optCitas.Name = "optCitas";
+            this.optCitas.Size = new System.Drawing.Size(40, 40);
+            this.optCitas.Text = "Citas";
+            this.optCitas.Click += new System.EventHandler(this.optCitas_Click);
             // 
             // optSalir
             // 
@@ -119,7 +120,7 @@
         private System.Windows.Forms.ToolStrip optMedicos;
         private System.Windows.Forms.ToolStripButton optMedic;
         private System.Windows.Forms.ToolStripButton optPacientes;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton optCitas;
         private System.Windows.Forms.ToolStripButton optSalir;
     }
 }
